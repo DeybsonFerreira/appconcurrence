@@ -1,0 +1,6 @@
+wwwroot\index.css
+wwwroot\index.html
+wwwroot\index.js
+C:\Projetcts\appConcorrence\Concorrencia.Api\wwwroot\index.css
+C:\Projetcts\appConcorrence\Concorrencia.Api\wwwroot\index.html
+C:\Projetcts\appConcorrence\Concorrencia.Api\wwwroot\index.js

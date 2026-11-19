@@ -1,0 +1,279 @@
+:root {
+    --texto: #111827;
+    --suave: #6b7280;
+    --linha: #e5e7eb;
+    --fundo: #ffffff;
+    --destaque: #111827;
+    --ok: #047857;
+    --alerta: #b45309;
+    --erro: #b91c1c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    margin: 0 0 4px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+header p {
+    margin: 0;
+    color: var(--suave);
+    font-size: 14px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--suave);
+}
+
+.linha-campos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-size: 13px;
+    color: var(--suave);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid var(--linha);
+    background: transparent;
+    color: var(--texto);
+    font: inherit;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: var(--destaque);
+}
+
+fieldset {
+    margin: 28px 0 0;
+    padding: 0;
+    border: none;
+}
+
+legend {
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 13px;
+    color: var(--suave);
+}
+
+.opcoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.opcao {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border: 1px solid var(--linha);
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.opcao:has(input:checked) {
+    border-color: var(--texto);
+    background: #f3f4f6;
+}
+
+.opcao input {
+    margin: 0;
+    accent-color: var(--destaque);
+    cursor: pointer;
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 28px;
+}
+
+button {
+    padding: 10px 16px;
+    border: 1px solid var(--linha);
+    border-radius: 6px;
+    background: #ffffff;
+    color: var(--texto);
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    border-color: #9ca3af;
+}
+
+button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+button.primario {
+    border-color: var(--destaque);
+    background: var(--destaque);
+    color: #ffffff;
+}
+
+button.primario:hover:not(:disabled) {
+    background: #000000;
+}
+
+button.limpar {
+    margin-left: auto;
+    border-color: transparent;
+    color: var(--suave);
+}
+
+button.limpar:hover:not(:disabled) {
+    border-color: transparent;
+    color: var(--erro);
+}
+
+.resumo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 6px;
+    align-items: baseline;
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--linha);
+    font-size: 13px;
+    color: var(--suave);
+}
+
+.resumo .alerta {
+    color: var(--alerta);
+}
+
+.resumo .ok {
+    color: var(--ok);
+}
+
+.tabela {
+    margin-top: 48px;
+}
+
+.tabela-topo {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.contador {
+    font-size: 13px;
+    color: var(--suave);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th,
+td {
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--linha);
+    text-align: left;
+}
+
+th {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--suave);
+}
+
+th:first-child,
+td:first-child {
+    padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+    padding-right: 0;
+}
+
+tr.duplicado td {
+    background: #fff7ed;
+}
+
+.tag {
+    margin-left: 6px;
+    font-size: 11px;
+    color: var(--alerta);
+}
+
+.vazio {
+    margin: 0;
+    padding: 16px 0;
+    color: var(--suave);
+    font-size: 14px;
+}
+
+.oculto {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 32px 16px 64px;
+    }
+
+    .linha-campos {
+        grid-template-columns: 1fr;
+    }
+
+    button.limpar {
+        margin-left: 0;
+    }
+}

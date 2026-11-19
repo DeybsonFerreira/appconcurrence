@@ -1,0 +1,53 @@
+[
+  {
+    "ContainingType": "Concorrencia.Api.Controllers.PessoaController",
+    "Method": "Listar",
+    "RelativePath": "api/pessoas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IReadOnlyList\u00601[[Concorrencia.Api.Models.Pessoa, Concorrencia.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Concorrencia.Api.Controllers.PessoaController",
+    "Method": "Adicionar",
+    "RelativePath": "api/pessoas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Concorrencia.Api.Models.CriarPessoaRequest",
+        "IsRequired": true
+      },
+      {
+        "Name": "estrategia",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Concorrencia.Api.Controllers.PessoaController",
+    "Method": "Limpar",
+    "RelativePath": "api/pessoas/limpar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

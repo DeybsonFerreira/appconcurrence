@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Concorrência - Cadastro de Pessoas</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Concorrência</h1>
+            <p>Cadastro em memória com latência simulada de banco de dados.</p>
+        </header>
+
+        <form id="form-cadastro" autocomplete="off" novalidate>
+            <div class="linha-campos">
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" maxlength="80" placeholder="Maria">
+                </div>
+                <div class="campo">
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" id="sobrenome" maxlength="80" placeholder="Silva">
+                </div>
+                <div class="campo">
+                    <label for="documento">Documento</label>
+                    <input type="text" id="documento" maxlength="30" placeholder="12345678900">
+                </div>
+            </div>
+
+            <fieldset>
+                <legend>Estratégia</legend>
+                <div class="opcoes">
+                    <label class="opcao">
+                        <input type="checkbox" class="estrategia" value="sem-protecao" checked>
+                        Sem proteção
+                    </label>
+                    <label class="opcao">
+                        <input type="checkbox" class="estrategia" value="concurrent-dictionary">
+                        ConcurrentDictionary
+                    </label>
+                    <label class="opcao">
+                        <input type="checkbox" class="estrategia" value="semaphore">
+                        SemaphoreSlim
+                    </label>
+                    <label class="opcao">
+                        <input type="checkbox" class="estrategia" value="lock">
+                        lock / Monitor
+                    </label>
+                    <label class="opcao">
+                        <input type="checkbox" class="estrategia" value="memory-cache">
+                        MemoryCache
+                    </label>
+                </div>
+            </fieldset>
+
+            <div class="acoes">
+                <button type="submit" class="primario" id="btn-salvar">Salvar</button>
+                <button type="button" id="btn-concorrencia">Simular 10x</button>
+                <button type="button" class="limpar" id="btn-limpar">Limpar</button>
+            </div>
+        </form>
+
+        <div id="resumo" class="resumo oculto"></div>
+
+        <section class="tabela">
+            <div class="tabela-topo">
+                <h2>Cadastros</h2>
+                <span class="contador" id="contador">0 registros</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Sobrenome</th>
+                        <th>Documento</th>
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody id="corpo-tabela"></tbody>
+            </table>
+            <p class="vazio" id="vazio">Nenhum registro.</p>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
