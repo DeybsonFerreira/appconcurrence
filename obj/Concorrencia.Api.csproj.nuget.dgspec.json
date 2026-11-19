@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetcts\\appConcorrence\\Concorrencia.Api\\Concorrencia.Api.csproj": {}
+    "c:\\Projetcts\\appConcorrence\\Concorrencia.Api\\Concorrencia.Api.csproj": {}
   },
   "projects": {
-    "C:\\Projetcts\\appConcorrence\\Concorrencia.Api\\Concorrencia.Api.csproj": {
+    "c:\\Projetcts\\appConcorrence\\Concorrencia.Api\\Concorrencia.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetcts\\appConcorrence\\Concorrencia.Api\\Concorrencia.Api.csproj",
+        "projectUniqueName": "c:\\Projetcts\\appConcorrence\\Concorrencia.Api\\Concorrencia.Api.csproj",
         "projectName": "Concorrencia.Api",
-        "projectPath": "C:\\Projetcts\\appConcorrence\\Concorrencia.Api\\Concorrencia.Api.csproj",
+        "projectPath": "c:\\Projetcts\\appConcorrence\\Concorrencia.Api\\Concorrencia.Api.csproj",
         "packagesPath": "C:\\Users\\deybson.ferreira\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetcts\\appConcorrence\\Concorrencia.Api\\obj\\",
+        "outputPath": "c:\\Projetcts\\appConcorrence\\Concorrencia.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
